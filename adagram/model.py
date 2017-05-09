@@ -171,6 +171,7 @@ class VectorModel(object):
             z = np.log(z)
         else:
             z = np.zeros(self.prototypes, dtype=np.float64)
+        context = context.split()
         inplace_update_z(
             self, z, word_idx,
             context=np.array(
